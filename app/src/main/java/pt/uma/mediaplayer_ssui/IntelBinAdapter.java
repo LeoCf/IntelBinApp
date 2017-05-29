@@ -80,14 +80,10 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
         Utilities milSecConverter = new Utilities();
 
         // Set item views based on the  views and data model
-        TextView textView = viewHolder.nameTextView;
-        textView.setText(intelBin.getName());
+
         TextView textView1 = viewHolder.intelBinNameView;
         textView1.setText(intelBin.getName());
-        TextView yearView = viewHolder.yearTextView;
-        yearView.setText(String.valueOf(intelBin.getFloor()));
-        TextView lenght = viewHolder.lengthTextView;
-        lenght.setText(intelBin.getLevel());
+
 
 
         //Selecting checkBox

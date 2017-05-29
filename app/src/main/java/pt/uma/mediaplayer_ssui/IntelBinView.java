@@ -66,7 +66,7 @@ public class IntelBinView extends AppCompatActivity {
 
                     // Enter URL address where your json file resides
                     // Even you can make call to php file which returns json data
-                    url = new URL("http://192.168.2.130:8080/intelbins");
+                    url = new URL("http://192.168.2.130:8080/intelbinsuser");
 
                 } catch (MalformedURLException e) {
                     // TODO Auto-generated catch block
@@ -83,7 +83,7 @@ public class IntelBinView extends AppCompatActivity {
 
 
                     // setDoOutput to true as we recieve data from json file
-                    conn.setDoOutput(true);
+                    //conn.setDoOutput(true);
 
                 } catch (IOException e1) {
                     // TODO Auto-generated catch block
