@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Media Player</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="rewind"><![CDATA[<<]]></string>
+    <string name="forward"><![CDATA[>>]]></string>
+    <string name="pause">||</string>
+
+    <color name="black">#000100</color>
+    <color name="silver">#a1a6b4</color>
+    <color name="dark_sky_blue">#94C5CC</color>
+    <color name="pale_aqua">#B4D2E7</color>
+    <color name="ghost_white">#F8F8F8</color>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
