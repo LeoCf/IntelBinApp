@@ -3,6 +3,7 @@
     package="pt.uma.mediaplayer_ssui">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -13,18 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainInterface"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".IntelBinView">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" ></action>
+            <category android:name="android.intent.category.LAUNCHER" ></category>
+        </intent-filter>
         </activity>
-        <activity android:name=".MultimediaList"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Player"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

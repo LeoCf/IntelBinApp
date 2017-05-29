@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/dark_sky_blue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -17,25 +17,25 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/btn_building"
             android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@color/ghost_white"
-            android:text="Album"
-            android:textOff="Album"
-            android:textOn="Album"
+            android:text="Edificio"
+            android:textOff="Building"
+            android:textOn="Building"
             android:textSize="8sp" />
 
         <ToggleButton
-            android:id="@+id/sory_name"
+            android:id="@+id/btn_floor"
             android:layout_width="72dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -43,25 +43,25 @@
             android:autoText="false"
             android:background="@color/ghost_white"
             android:checked="true"
-            android:text="Song"
-            android:textOff="Song"
-            android:textOn="Song"
+            android:text="Floor"
+            android:textOff="Floor"
+            android:textOn="Floor"
             android:textSize="8sp" />
 
         <ToggleButton
-            android:id="@+id/sort_artist"
+            android:id="@+id/btn_room"
             android:layout_width="71dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:background="@color/ghost_white"
-            android:textOff="Artist"
-            android:textOn="Artist"
+            android:textOff="Room"
+            android:textOn="Room"
             android:textSize="8sp" />
 
         <ToggleButton
-            android:id="@+id/sort_year"
+            android:id="@+id/btn_level"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -70,12 +70,12 @@
             android:background="@color/ghost_white"
             android:text="Year"
             android:textAlignment="center"
-            android:textOff="Year"
-            android:textOn="Year"
+            android:textOff="level"
+            android:textOn="level"
             android:textSize="8sp" />
 
         <ToggleButton
-            android:id="@+id/btn_duration"
+            android:id="@+id/btn_corridor"
             android:layout_width="23dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -85,85 +85,20 @@
             android:layout_weight="0.30"
             android:background="@color/ghost_white"
             android:text="ToggleButton"
-            android:textOff="Duration"
-            android:textOn="Duration"
+            android:textOff="corridor"
+            android:textOn="corridor"
             android:textSize="7sp" />
 
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvMultimedias"
+        android:id="@+id/rvIntelBinList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
         android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/ghost_white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <CheckBox
-            android:id="@+id/check_all"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/ghost_white"
-            android:buttonTint="@color/black"
-            android:text="All" />
-
-        <ImageButton
-            android:id="@+id/play_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/ghost_white"
-            android:tint="@color/black"
-            app:srcCompat="@android:drawable/ic_media_play"
-            android:layout_weight="0.42" />
-
-        <EditText
-            android:id="@+id/search_txt"
-            android:layout_width="152dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/dark_sky_blue"
-            android:ems="10"
-            android:hint="Enter Song or Artist name"
-            android:inputType="textPersonName"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/search_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Search"
-            android:textSize="6sp"></Button>
-
-
-    </LinearLayout>
 
 
 </RelativeLayout>

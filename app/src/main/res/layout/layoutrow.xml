@@ -13,7 +13,7 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <ImageView
-        android:id="@+id/album_image"
+        android:id="@+id/intelBin_building"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="TODO"
@@ -25,16 +25,12 @@
 
 
     <TextView
-        android:id="@+id/media_name"
+        android:id="@+id/intelBin_floor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/music_checkBox"
-        android:layout_alignEnd="@+id/artist_name"
-        android:layout_alignLeft="@+id/artist_name"
+        android:layout_alignLeft="@+id/intelBin_name"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/artist_name"
-        android:layout_alignStart="@+id/artist_name"
-        android:layout_toStartOf="@+id/music_year"
+        android:layout_alignStart="@+id/intelBin_name"
         android:maxLines="1"
         android:text="Description"
         android:textColor="@color/black"
@@ -42,15 +38,15 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/artist_name"
+        android:id="@+id/intelBin_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/music_year"
+        android:layout_alignTop="@+id/intelBin_corridor"
         android:layout_alignWithParentIfMissing="true"
         android:layout_marginLeft="15dp"
-        android:layout_toEndOf="@+id/album_image"
-        android:layout_toRightOf="@+id/album_image"
+        android:layout_toEndOf="@+id/intelBin_building"
+        android:layout_toRightOf="@+id/intelBin_building"
         android:gravity="center_vertical"
         android:text="Example application"
         android:textSize="12sp" />
@@ -66,17 +62,17 @@
         android:layout_alignParentRight="true" />
 
     <TextView
-        android:id="@+id/music_year"
+        android:id="@+id/intelBin_corridor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="13sp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/music_length"
-        android:layout_toStartOf="@+id/music_length" />
+        android:layout_toLeftOf="@+id/intelBin_level"
+        android:layout_toStartOf="@+id/intelBin_level" />
 
     <TextView
-        android:id="@+id/music_length"
+        android:id="@+id/intelBin_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

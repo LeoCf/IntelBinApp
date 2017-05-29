@@ -58,46 +58,46 @@ public class Utilities {
         return currentDuration * 1000;
     }
 
-
+    /*
     //Comparations for sorting the lists
-    static Comparator<Multimedia> comparatorName  = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorName  = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             return aMult.getName().compareTo(bMult.getName());
         }
     };
 
-    static Comparator<Multimedia> comparatorNameDesc  = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorNameDesc  = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             return bMult.getName().compareTo(aMult.getName());
         }
     };
 
-    static Comparator<Multimedia> comparatorArtistDesc = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorArtistDesc = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             return bMult.getArtist().compareTo(aMult.getArtist());
         }
     };
 
-    static Comparator<Multimedia> comparatorArtist = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorArtist = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             return aMult.getArtist().compareTo(bMult.getArtist());
         }
     };
 
-    static Comparator<Multimedia> comparatorGender = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorGender = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             return aMult.getType().compareTo(bMult.getType());
         }
     };
 
-    static Comparator<Multimedia> comparatorYearDesc = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorYearDesc = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             int a =aMult.getYear();
             int b =bMult.getYear();
             int cmp = a > b ? -1 : a < b ? +1 : 0;
@@ -105,9 +105,9 @@ public class Utilities {
         }
     };
 
-    static Comparator<Multimedia> comparatorYear = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorYear = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             int a =aMult.getYear();
             int b =bMult.getYear();
             int cmp = a > b ? +1 : a < b ? -1 : 0;
@@ -115,9 +115,9 @@ public class Utilities {
         }
     };
 
-    static Comparator<Multimedia> comparatorDuration = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorDuration = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             float a =aMult.getDuration();
             float b =bMult.getDuration();
             int cmp = a > b ? +1 : a < b ? -1 : 0;
@@ -125,9 +125,9 @@ public class Utilities {
         }
     };
 
-    static Comparator<Multimedia> comparatorDurationDesc = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorDurationDesc = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             float a =aMult.getDuration();
             float b =bMult.getDuration();
             int cmp = a > b ? -1 : a < b ? +1 : 0;
@@ -136,13 +136,14 @@ public class Utilities {
     };
 
     //Implements comparator based if music is checked or not.
-    static Comparator<Multimedia> comparatorChecked = new Comparator<Multimedia>(){
+    static Comparator<IntelBin> comparatorChecked = new Comparator<IntelBin>(){
         @Override
-        public int compare(Multimedia aMult,Multimedia bMult){
+        public int compare(IntelBin aMult, IntelBin bMult){
             int a = (aMult.isSelected()) ? 1 : 0;
             int b = (aMult.isSelected()) ? 1 : 0;
             int cmp = a == b && a==1 ? -1 : 0;
             return cmp;
         }
     };
+    */
 }
