@@ -84,10 +84,12 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
         textView1.setText(intelBin.getName());
         ImageView imageBuilding =viewHolder.intelBinBuilding;
         TextView intelBinFloor =viewHolder.intelBinFloor;
-        intelBinFloor.setText(intelBin.getFloor());
-        TextView  intelCorridor =viewHolder.intelBinCorridor;
+        intelBinFloor.setText(Integer.toString(intelBin.getFloor()));
+        TextView  intelBinCorridor =viewHolder.intelBinCorridor;
+        intelBinCorridor.setText(intelBin.getDescription());
         TextView  intelBinLevel =viewHolder.intelBinLevel;
-        intelBinLevel.setText(intelBin.getLevel());
+        intelBinLevel.setText(Integer.toString(intelBin.getLevel()));
+
 
 
 
