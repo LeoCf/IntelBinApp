@@ -77,12 +77,19 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
     public void onBindViewHolder(IntelBinAdapter.ViewHolder viewHolder, final int position) {
         // Get the data model based on position
         final IntelBin intelBin = mIntelBins.get(position);
-        Utilities milSecConverter = new Utilities();
 
         // Set item views based on the  views and data model
 
         TextView textView1 = viewHolder.intelBinNameView;
         textView1.setText(intelBin.getName());
+        ImageView imageBuilding =viewHolder.intelBinBuilding;
+        TextView intelBinFloor =viewHolder.intelBinFloor;
+        intelBinFloor.setText(intelBin.getFloor());
+        TextView  intelCorridor =viewHolder.intelBinCorridor;
+        TextView  intelBinLevel =viewHolder.intelBinLevel;
+        intelBinLevel.setText(intelBin.getLevel());
+
+
 
 
 
@@ -112,11 +119,12 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView nameTextView;
+
         public TextView intelBinNameView;
-        public ImageView albumImageView;
-        public TextView yearTextView;
-        public TextView lengthTextView;
+        public ImageView intelBinBuilding;
+        public TextView  intelBinFloor;
+        public TextView intelBinCorridor;
+        public TextView intelBinLevel;
         public CheckBox selectionBox;
 
 
@@ -124,9 +132,10 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
         {
             super(itemView);
             intelBinNameView = (TextView) itemView.findViewById(R.id.intelBin_name);
-            albumImageView= (ImageView) itemView.findViewById(R.id.intelBin_building);
-            yearTextView =   (TextView) itemView.findViewById(R.id.intelBin_corridor);
-            lengthTextView = (TextView) itemView.findViewById(R.id.intelBin_level);
+            intelBinBuilding= (ImageView) itemView.findViewById(R.id.intelBin_building);
+            intelBinFloor  =    (TextView) itemView.findViewById(R.id.intelBin_floor);
+            intelBinCorridor =   (TextView) itemView.findViewById(R.id.intelBin_corridor);
+            intelBinLevel = (TextView) itemView.findViewById(R.id.intelBin_level);
             selectionBox = (CheckBox) itemView.findViewById(R.id.music_checkBox);
 
 
