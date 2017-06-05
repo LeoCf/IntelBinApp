@@ -144,7 +144,7 @@ public class IntelBinView extends AppCompatActivity {
                         String fetchedBinName= json_data.getString("nome");
                         String fetchedBinDesc= json_data.getString("descricao");
                         int fetchedBinLevel = json_data.getInt("level");
-                        int fetchedBinFloor= json_data.getInt("andar");
+                        String fetchedBinFloor= json_data.getString("andar");
                         //int fetchedBinFloor_id= json_data.getInt("intelBinFloor_id");
                         String fetchedBinBuilding=json_data.getString("edificio");
                         String fetchedBinLocation=json_data.getString("local");

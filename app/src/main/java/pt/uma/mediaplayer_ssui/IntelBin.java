@@ -23,7 +23,7 @@ public class IntelBin implements Parcelable{
     private String mName;
     private String mDescription;
     private int mLevel;
-    private int mFloor;
+    private String mFloor;
     private int mFloor_id;
     private String mBuilding;
     private String mLocation;
@@ -32,7 +32,7 @@ public class IntelBin implements Parcelable{
 
 
 
-    public IntelBin(int mId, String mName, String mDescription, int mLevel, int mFloor, int mFloor_id, String mBuilding,String mLocation){
+    public IntelBin(int mId, String mName, String mDescription, int mLevel, String mFloor, int mFloor_id, String mBuilding,String mLocation){
         this.mId =mId;
         this.mName=mName;
         this.mDescription=mDescription;
@@ -50,7 +50,7 @@ public class IntelBin implements Parcelable{
         mName = source.readString();
         mDescription = source.readString();
         mLevel = source.readInt();
-        mFloor = source.readInt();
+        mFloor = source.readString();
         mFloor_id = source.readInt();
         mBuilding =source.readString();
     }
@@ -67,7 +67,7 @@ public class IntelBin implements Parcelable{
 
     public int getLevel() {return mLevel;}
 
-    public int getFloor() {return mFloor;}
+    public String getFloor() {return mFloor;}
 
     public int getFloorId(){return mFloor_id;}
 
@@ -76,6 +76,8 @@ public class IntelBin implements Parcelable{
     public boolean isSelected(){
         return mSelected;
     }
+
+    public String getLocation(){return mLocation;}
 
     public void  setSelected(Boolean status){
         mSelected=status;
@@ -106,7 +108,7 @@ public class IntelBin implements Parcelable{
         dest.writeInt(mId);
         dest.writeString(mName);
         dest.writeString(mDescription);
-        dest.writeInt(mFloor);
+        dest.writeString(mFloor);
         dest.writeInt(mFloor_id);
         dest.writeString(mBuilding);
     }

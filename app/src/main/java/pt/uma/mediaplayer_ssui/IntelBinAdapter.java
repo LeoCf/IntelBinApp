@@ -5,10 +5,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -84,9 +88,9 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
         textView1.setText(intelBin.getName());
         ImageView imageBuilding =viewHolder.intelBinBuilding;
         TextView intelBinFloor =viewHolder.intelBinFloor;
-        intelBinFloor.setText(Integer.toString(intelBin.getFloor()));
-        TextView  intelBinCorridor =viewHolder.intelBinCorridor;
-        intelBinCorridor.setText(intelBin.getDescription());
+        intelBinFloor.setText(intelBin.getFloor());
+        TextView  intelBinLocation =viewHolder.intelBinLocation;
+        intelBinLocation.setText(intelBin.getDescription());
         TextView  intelBinLevel =viewHolder.intelBinLevel;
         intelBinLevel.setText(Integer.toString(intelBin.getLevel()));
 
@@ -95,20 +99,7 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
 
 
 
-        //Selecting checkBox
-        CheckBox mSelected = viewHolder.selectionBox;
-        mSelected.setOnCheckedChangeListener(null);
-        mSelected.setSelected(intelBin.isSelected());
 
-        //Selects the song that was checked
-        mSelected.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                mIntelBins.get(position).setSelected(isChecked);
-
-            }
-        });
 
     }
 
@@ -125,20 +116,25 @@ public class IntelBinAdapter extends RecyclerView.Adapter<IntelBinAdapter.ViewHo
         public TextView intelBinNameView;
         public ImageView intelBinBuilding;
         public TextView  intelBinFloor;
-        public TextView intelBinCorridor;
+        public TextView intelBinLocation;
         public TextView intelBinLevel;
+        public Button btn_submit_level;
+        public EditText text_problem;
+        public TextView label_problem;
         public CheckBox selectionBox;
 
 
         public ViewHolder(View itemView)
         {
             super(itemView);
-            intelBinNameView = (TextView) itemView.findViewById(R.id.intelBin_name);
+            intelBinNameView = (TextView) itemView.findViewById(R.id.inteBin_name);
             intelBinBuilding= (ImageView) itemView.findViewById(R.id.intelBin_building);
             intelBinFloor  =    (TextView) itemView.findViewById(R.id.intelBin_floor);
-            intelBinCorridor =   (TextView) itemView.findViewById(R.id.intelBin_corridor);
+            intelBinLocation =   (TextView) itemView.findViewById(R.id.intelBin_location);
             intelBinLevel = (TextView) itemView.findViewById(R.id.intelBin_level);
-            selectionBox = (CheckBox) itemView.findViewById(R.id.music_checkBox);
+            btn_submit_level =  (Button) itemView.findViewById(R.id.btn_prob);
+            text_problem =       (EditText) itemView.findViewById(R.id.problem_input);
+            label_problem =      (TextView) itemView.findViewById(R.id.problem_detect);
 
 
         }
