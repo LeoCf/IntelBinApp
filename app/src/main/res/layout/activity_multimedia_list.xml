@@ -62,32 +62,32 @@
             android:id="@+id/prog_room"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_below="@+id/label_bin"
             android:layout_marginLeft="17dp"
             android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/label_room"
+            android:layout_toRightOf="@+id/label_room"
             android:padding="10dp"
             android:text="1/4"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@+id/label_bin"
-            android:layout_toRightOf="@+id/label_room"
-            android:layout_toEndOf="@+id/label_room"
-            android:layout_alignBottom="@+id/imageView4" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/prog_bin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_toRightOf="@+id/imageView3"
             android:padding="10dp"
             android:paddingBottom="0dp"
             android:text="1/4"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_alignTop="@+id/imageView3"
-            android:layout_toRightOf="@+id/imageView3"
-            android:layout_toEndOf="@+id/imageView3" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/label_room"

@@ -2,6 +2,7 @@ package pt.uma.mediaplayer_ssui;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +22,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static pt.uma.mediaplayer_ssui.IntelBin.createIntelBinList;
 
@@ -31,6 +34,29 @@ public class IntelBinView extends AppCompatActivity {
     private RecyclerView mIntelBinList;
     private IntelBinAdapter mAdapter;
 
+    private void setRepeatingAsyncTask() {
+
+        final Handler handler = new Handler();
+        Timer timer = new Timer();
+
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(new Runnable() {
+                    public void run() {
+                        try {
+                            new AsyncFetch().execute();
+                        } catch (Exception e) {
+                            // error, do something
+                        }
+                    }
+                });
+            }
+        };
+
+        timer.schedule(task, 0, 60*1000);  // interval of one minute
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +65,7 @@ public class IntelBinView extends AppCompatActivity {
         //RecyclerView
 
         //Make call to AsyncTask
-        new AsyncFetch().execute();
+       setRepeatingAsyncTask();
 
     }
 
@@ -66,7 +92,7 @@ public class IntelBinView extends AppCompatActivity {
 
                     // Enter URL address where your json file resides
                     // Even you can make call to php file which returns json data
-                    url = new URL("http://192.168.2.130:8080/intelbinsuser");
+                    url = new URL("http://192.168.2.130:8080/intelbinsuser/4");
 
                 } catch (MalformedURLException e) {
                     // TODO Auto-generated catch block
@@ -128,7 +154,6 @@ public class IntelBinView extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(String result) {
-
                 //this method will be running on UI thread
                 pdLoading.dismiss();
                 List<IntelBin> intelBinList = IntelBin.createIntelBinList();
