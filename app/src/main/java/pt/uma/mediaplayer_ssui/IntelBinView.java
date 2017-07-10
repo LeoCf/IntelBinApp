@@ -54,7 +54,7 @@ public class IntelBinView extends AppCompatActivity {
             }
         };
 
-        timer.schedule(task, 0, 60*1000);  // interval of one minute
+        timer.schedule(task, 0, 20*1000);  // interval of one minute
 
     }
 
