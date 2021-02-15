@@ -1,7 +1,6 @@
 # IntelBinApp
-aplicaçaoUbiqua
+Mobile Application
 
-Protótipo App que verifique o nivel dos caixotes do lixo, e serve igualmente para reportar problemas nos locais onde
-estes se encontram.
+Project for Ubiquitous computer course, giving the possibility of managing the fill level of different trash cans, automating the recovery task by the clearing clerks.
 
 ![picture](app/intel_bin.jpg)
